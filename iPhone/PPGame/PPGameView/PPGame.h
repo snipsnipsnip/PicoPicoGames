@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,60 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#import <Foundation/Foundation.h>
+#import "PPGamePoly.h"
+#import "PPGameSplite.h"
+#if TARGET_OS_IPHONE
+#import "PPGameView.h"
+#import "PPGameText.h"
+#else
+#import "PPGameView_App.h"
+#endif
+
+@interface PPGame : NSObject {
+	int polyCount;
+	PPGamePoly poly[PPGAME_MAX_POLY];
+	PPGameView* view;
+#if TARGET_OS_IPHONE
+	UIViewController* controller;
+#else
+	id controller;
+#endif
+	bool initFlag;
+}
+
+#if TARGET_OS_IPHONE
+@property (nonatomic,retain) UIViewController* controller;
+#else
+@property (nonatomic,retain) id controller;
+#endif
+@property (nonatomic,assign) bool initFlag;
+
+- (void)setView:(PPGameView*)view;
+
+- (bool)start;
+- (int)idle;
+- (int)draw;
+- (int)drawPost;
+- (bool)exit;
+- (void)resignActive;
+- (void)becomeActive;
+
+- (PPGameTextureInfo*)textures;
+
+- (int)drawOT;
+- (void)textureIdle;
+
+//- (void)loadTexture:(int)index;
+//- (void)unloadTexture:(int)index;
+
+- (void)closeGame;
+
+- (BOOL)horizontalView;
+//- (int)arrowKeyCount;
+
+- (int)crosskeyAreaSize;
+
+@end

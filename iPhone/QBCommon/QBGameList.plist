@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>MISSILE PANIC</string>
+		<key>class</key>
+		<string>PPMissilePanic</string>
+		<key>icon</key>
+		<string>missilepanicicon.png</string>
+		<key>url</key>
+		<string>missilepanic.html</string>
+		<key>manual</key>
+		<string>missilepanic</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>PICO PICO PUZZLE</string>
+		<key>class</key>
+		<string>PPBlueBall</string>
+		<key>icon</key>
+		<string>picopuzzle.png</string>
+		<key>url</key>
+		<string>picopuzzle.html</string>
+		<key>manual</key>
+		<string>picopuzzle</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>PICO PICO RACE</string>
+		<key>class</key>
+		<string>PPCarRace</string>
+		<key>icon</key>
+		<string>carraceIcon.png</string>
+		<key>url</key>
+		<string>carrace.html</string>
+		<key>manual</key>
+		<string>carrace</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>The legend of PicoHERO</string>
+		<key>class</key>
+		<string>PPPicoHero</string>
+		<key>icon</key>
+		<string>shadowIcon.png</string>
+		<key>url</key>
+		<string>picohero.html</string>
+		<key>manual</key>
+		<string>picohero</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>The tower of SHADOW</string>
+		<key>class</key>
+		<string>PPTShadow</string>
+		<key>icon</key>
+		<string>tshadowIcon.png</string>
+		<key>url</key>
+		<string>tshadow.html</string>
+		<key>manual</key>
+		<string>tshadow</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>The legend of PicoHERO2</string>
+		<key>class</key>
+		<string>PPPicoHero2</string>
+		<key>icon</key>
+		<string>shadow2Icon.png</string>
+		<key>url</key>
+		<string>picohero2.html</string>
+		<key>manual</key>
+		<string>picohero2</string>
+	</dict>
+</array>
+</plist>

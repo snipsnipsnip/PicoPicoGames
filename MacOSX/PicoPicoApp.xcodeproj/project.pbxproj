@@ -1,0 +1,880 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		6B1DDD6510F57DED002E2303 /* font.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1DDD6010F57DED002E2303 /* font.png */; };
+		6B1DDD6610F57DED002E2303 /* font2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1DDD6210F57DED002E2303 /* font2.png */; };
+		6B1DDD6710F57DED002E2303 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1DDD6410F57DED002E2303 /* key.png */; };
+		6B1DDD7B10F58016002E2303 /* carrace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1DDD7A10F58016002E2303 /* carrace.png */; };
+		6B1DDD7E10F58023002E2303 /* BlueBallChar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1DDD7D10F58023002E2303 /* BlueBallChar.png */; };
+		6B1DDD8610F5804B002E2303 /* tshadowChar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1DDD8510F5804B002E2303 /* tshadowChar.png */; };
+		6B1DDD8A10F5805F002E2303 /* shadowChar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B1DDD8910F5805F002E2303 /* shadowChar.png */; };
+		6B4FA4D010E05FE20044F5DD /* PPMissilePanic.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B4FA4CD10E05FE20044F5DD /* PPMissilePanic.mm */; };
+		6B4FA4D110E05FE20044F5DD /* QBMissilePanic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B4FA4CE10E05FE20044F5DD /* QBMissilePanic.cpp */; };
+		6B9635F310C0AE6F00F0527D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9635F210C0AE6F00F0527D /* Carbon.framework */; };
+		6B96361810C0AED500F0527D /* PPCarRace.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B96361310C0AED500F0527D /* PPCarRace.mm */; };
+		6B96361910C0AED500F0527D /* QBCarRace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96361510C0AED500F0527D /* QBCarRace.cpp */; };
+		6B96361B10C0AED500F0527D /* CarRaceMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B96361710C0AED500F0527D /* CarRaceMap.plist */; };
+		6B96362710C0AF1C00F0527D /* QBGameController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B96361E10C0AF1C00F0527D /* QBGameController.mm */; };
+		6B96362810C0AF1C00F0527D /* QBGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96362010C0AF1C00F0527D /* QBGame.cpp */; };
+		6B96362910C0AF1C00F0527D /* QBMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96362210C0AF1C00F0527D /* QBMenu.cpp */; };
+		6B96362A10C0AF1C00F0527D /* QBRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96362310C0AF1C00F0527D /* QBRect.cpp */; };
+		6B96362B10C0AF1C00F0527D /* QBUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96362610C0AF1C00F0527D /* QBUtil.cpp */; };
+		6B96363A10C0AF8700F0527D /* PPGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B96362E10C0AF8700F0527D /* PPGame.mm */; };
+		6B96363B10C0AF8700F0527D /* PPGameSplite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96363110C0AF8700F0527D /* PPGameSplite.cpp */; };
+		6B96363E10C0AF8700F0527D /* PPGamePoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96363610C0AF8700F0527D /* PPGamePoly.cpp */; };
+		6B96365110C0B27F00F0527D /* PPGameUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B96364F10C0B27F00F0527D /* PPGameUtil.mm */; };
+		6B96366E10C0B40B00F0527D /* PPGameMap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B96366D10C0B40B00F0527D /* PPGameMap.mm */; };
+		6B96367B10C0B42B00F0527D /* PPGameMapData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B96367A10C0B42B00F0527D /* PPGameMapData.cpp */; };
+		6B9636B410C0B70E00F0527D /* PPGameButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B9636B310C0B70E00F0527D /* PPGameButton.cpp */; };
+		6B9636C510C0B84600F0527D /* PPGameBGM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9636C410C0B84600F0527D /* PPGameBGM.m */; };
+		6B9636D910C0B92C00F0527D /* PPGameText.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B9636D810C0B92C00F0527D /* PPGameText.mm */; };
+		6B9636E110C0B9D900F0527D /* PPGameRunlength.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B9636DF10C0B9D900F0527D /* PPGameRunlength.c */; };
+		6B9638EB10C0C79C00F0527D /* PPBlueBall.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B9638E710C0C79C00F0527D /* PPBlueBall.mm */; };
+		6B9638EC10C0C79C00F0527D /* QBBlueBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B9638E910C0C79C00F0527D /* QBBlueBall.cpp */; };
+		6B9639CC10C0FAD900F0527D /* PPGrafSample.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B9639C910C0FAD900F0527D /* PPGrafSample.mm */; };
+		6B9639CD10C0FAD900F0527D /* QBGrafSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B9639CA10C0FAD900F0527D /* QBGrafSample.cpp */; };
+		6B963B6D10C11F2D00F0527D /* PPTShadow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B963B6A10C11F2D00F0527D /* PPTShadow.mm */; };
+		6B963B6E10C11F2D00F0527D /* QBTShadow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B963B6C10C11F2D00F0527D /* QBTShadow.cpp */; };
+		6B963B7410C11F3600F0527D /* PPPicoHero.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B963B7010C11F3600F0527D /* PPPicoHero.mm */; };
+		6B963B7510C11F3600F0527D /* QBPicoHero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B963B7210C11F3600F0527D /* QBPicoHero.cpp */; };
+		6B963B7610C11F3600F0527D /* QBPicoHero.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B963B7310C11F3600F0527D /* QBPicoHero.plist */; };
+		6B963B7C10C11F3E00F0527D /* PPPicoHero2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B963B7810C11F3E00F0527D /* PPPicoHero2.mm */; };
+		6B963B7D10C11F3E00F0527D /* QBPicoHero2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B963B7A10C11F3E00F0527D /* QBPicoHero2.cpp */; };
+		6B963B7E10C11F3E00F0527D /* QBPicoHero2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B963B7B10C11F3E00F0527D /* QBPicoHero2.plist */; };
+		6B9A24B010C0A3C00094406C /* PPGameView_App.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A24AF10C0A3C00094406C /* PPGameView_App.mm */; };
+		6B9A24B410C0A44E0094406C /* QBController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A24B310C0A44E0094406C /* QBController.mm */; };
+		6B9A24B910C0A6B00094406C /* PPGameSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A24B810C0A6B00094406C /* PPGameSound.cpp */; };
+		6B9A24BE10C0A6BB0094406C /* QBSound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A24BA10C0A6BB0094406C /* QBSound.cpp */; };
+		6B9A24BF10C0A6BB0094406C /* QBSoundMac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B9A24BC10C0A6BB0094406C /* QBSoundMac.cpp */; };
+		6B9A24C310C0A6DD0094406C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A24C210C0A6DD0094406C /* OpenGL.framework */; };
+		6B9A24D710C0A6E30094406C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A24D610C0A6E30094406C /* AudioToolbox.framework */; };
+		6B9A24EC10C0A6E80094406C /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A24EB10C0A6E80094406C /* AudioUnit.framework */; };
+		6B9A250E10C0AA9E0094406C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9A250D10C0AA9E0094406C /* IOKit.framework */; };
+		6BAF4DD310F5831300688947 /* QBCommonGrobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAF4DD210F5831300688947 /* QBCommonGrobal.m */; };
+		6BC7D75610D857150022D4FE /* MissilePanic.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7D75510D857150022D4FE /* MissilePanic.png */; };
+		6BDC6A0D1101D39700A574A1 /* PPTemplate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC6A0A1101D39700A574A1 /* PPTemplate.mm */; };
+		6BDC6A0E1101D39700A574A1 /* QBTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC6A0B1101D39700A574A1 /* QBTemplate.cpp */; };
+		6BDC6AF41101DFC100A574A1 /* QBGameInstant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC6AF11101DFC100A574A1 /* QBGameInstant.cpp */; };
+		6BDC6B7B1101E6CB00A574A1 /* QBTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC6B7A1101E6CB00A574A1 /* QBTemplate.png */; };
+		6BDC6C761101F92800A574A1 /* PPTankGame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC6C721101F92800A574A1 /* PPTankGame.mm */; };
+		6BDC6C771101F92800A574A1 /* QBTankGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC6C731101F92800A574A1 /* QBTankGame.cpp */; };
+		6BDC6C781101F92800A574A1 /* QBTankGame.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC6C751101F92800A574A1 /* QBTankGame.png */; };
+		6BE90CFB10D9B84700080E36 /* QBMissilePanic01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CCB10D9B84700080E36 /* QBMissilePanic01.plist */; };
+		6BE90CFC10D9B84700080E36 /* QBMissilePanic02.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CCC10D9B84700080E36 /* QBMissilePanic02.plist */; };
+		6BE90CFD10D9B84700080E36 /* QBMissilePanic03.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CCD10D9B84700080E36 /* QBMissilePanic03.plist */; };
+		6BE90CFE10D9B84700080E36 /* QBMissilePanic04.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CCE10D9B84700080E36 /* QBMissilePanic04.plist */; };
+		6BE90CFF10D9B84700080E36 /* QBMissilePanic05.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CCF10D9B84700080E36 /* QBMissilePanic05.plist */; };
+		6BE90D0010D9B84700080E36 /* QBMissilePanic06.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD010D9B84700080E36 /* QBMissilePanic06.plist */; };
+		6BE90D0110D9B84700080E36 /* QBMissilePanic07.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD110D9B84700080E36 /* QBMissilePanic07.plist */; };
+		6BE90D0210D9B84700080E36 /* QBMissilePanic08.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD210D9B84700080E36 /* QBMissilePanic08.plist */; };
+		6BE90D0310D9B84700080E36 /* QBMissilePanic09.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD310D9B84700080E36 /* QBMissilePanic09.plist */; };
+		6BE90D0410D9B84700080E36 /* QBMissilePanic10.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD410D9B84700080E36 /* QBMissilePanic10.plist */; };
+		6BE90D0510D9B84700080E36 /* QBMissilePanic11.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD510D9B84700080E36 /* QBMissilePanic11.plist */; };
+		6BE90D0610D9B84700080E36 /* QBMissilePanic12.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD610D9B84700080E36 /* QBMissilePanic12.plist */; };
+		6BE90D0710D9B84700080E36 /* QBMissilePanic13.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD710D9B84700080E36 /* QBMissilePanic13.plist */; };
+		6BE90D0810D9B84700080E36 /* QBMissilePanic14.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD810D9B84700080E36 /* QBMissilePanic14.plist */; };
+		6BE90D0910D9B84700080E36 /* QBMissilePanic15.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CD910D9B84700080E36 /* QBMissilePanic15.plist */; };
+		6BE90D0A10D9B84700080E36 /* QBMissilePanic16.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CDA10D9B84700080E36 /* QBMissilePanic16.plist */; };
+		6BE90D0B10D9B84700080E36 /* QBMissilePanic17.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CDB10D9B84700080E36 /* QBMissilePanic17.plist */; };
+		6BE90D0C10D9B84700080E36 /* QBMissilePanic18.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CDC10D9B84700080E36 /* QBMissilePanic18.plist */; };
+		6BE90D0D10D9B84700080E36 /* QBMissilePanic19.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CDD10D9B84700080E36 /* QBMissilePanic19.plist */; };
+		6BE90D0E10D9B84700080E36 /* QBMissilePanic20.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CDE10D9B84700080E36 /* QBMissilePanic20.plist */; };
+		6BE90D0F10D9B84700080E36 /* QBMissilePanic21.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CDF10D9B84700080E36 /* QBMissilePanic21.plist */; };
+		6BE90D1010D9B84700080E36 /* QBMissilePanic22.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE010D9B84700080E36 /* QBMissilePanic22.plist */; };
+		6BE90D1110D9B84700080E36 /* QBMissilePanic23.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE110D9B84700080E36 /* QBMissilePanic23.plist */; };
+		6BE90D1210D9B84700080E36 /* QBMissilePanic24.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE210D9B84700080E36 /* QBMissilePanic24.plist */; };
+		6BE90D1310D9B84700080E36 /* QBMissilePanic25.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE310D9B84700080E36 /* QBMissilePanic25.plist */; };
+		6BE90D1410D9B84700080E36 /* QBMissilePanic26.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE410D9B84700080E36 /* QBMissilePanic26.plist */; };
+		6BE90D1510D9B84700080E36 /* QBMissilePanic27.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE510D9B84700080E36 /* QBMissilePanic27.plist */; };
+		6BE90D1610D9B84700080E36 /* QBMissilePanic28.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE610D9B84700080E36 /* QBMissilePanic28.plist */; };
+		6BE90D1710D9B84700080E36 /* QBMissilePanic29.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE710D9B84700080E36 /* QBMissilePanic29.plist */; };
+		6BE90D1810D9B84700080E36 /* QBMissilePanic30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE810D9B84700080E36 /* QBMissilePanic30.plist */; };
+		6BE90D1910D9B84700080E36 /* QBMissilePanic31.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CE910D9B84700080E36 /* QBMissilePanic31.plist */; };
+		6BE90D1A10D9B84700080E36 /* QBMissilePanic32.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE90CEA10D9B84700080E36 /* QBMissilePanic32.plist */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* PicoPicoApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicoPicoApp_Prefix.pch; sourceTree = "<group>"; };
+		6B1DDD5F10F57DED002E2303 /* font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font.h; path = ../iPhone/QBImages/font.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD6010F57DED002E2303 /* font.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font.png; path = ../iPhone/QBImages/font.png; sourceTree = SOURCE_ROOT; };
+		6B1DDD6110F57DED002E2303 /* font2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = font2.h; path = ../iPhone/QBImages/font2.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD6210F57DED002E2303 /* font2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = font2.png; path = ../iPhone/QBImages/font2.png; sourceTree = SOURCE_ROOT; };
+		6B1DDD6310F57DED002E2303 /* key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = key.h; path = ../iPhone/QBImages/key.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD6410F57DED002E2303 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = key.png; path = ../iPhone/QBImages/key.png; sourceTree = SOURCE_ROOT; };
+		6B1DDD7910F58016002E2303 /* carrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = carrace.h; path = ../iPhone/QBGames/CarRace/carrace.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD7A10F58016002E2303 /* carrace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = carrace.png; path = ../iPhone/QBGames/CarRace/carrace.png; sourceTree = SOURCE_ROOT; };
+		6B1DDD7C10F58023002E2303 /* BlueBallChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueBallChar.h; path = ../iPhone/QBGames/BlueBall/BlueBallChar.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD7D10F58023002E2303 /* BlueBallChar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueBallChar.png; path = ../iPhone/QBGames/BlueBall/BlueBallChar.png; sourceTree = SOURCE_ROOT; };
+		6B1DDD8110F5803C002E2303 /* QBPicoHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBPicoHero.h; path = ../iPhone/QBGames/PicoHero/QBPicoHero.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD8410F5804B002E2303 /* tshadowChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tshadowChar.h; path = ../iPhone/QBGames/TowerOfShadow/tshadowChar.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD8510F5804B002E2303 /* tshadowChar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tshadowChar.png; path = ../iPhone/QBGames/TowerOfShadow/tshadowChar.png; sourceTree = SOURCE_ROOT; };
+		6B1DDD8810F5805F002E2303 /* shadowChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shadowChar.h; path = ../iPhone/QBGames/PicoHero/shadowChar.h; sourceTree = SOURCE_ROOT; };
+		6B1DDD8910F5805F002E2303 /* shadowChar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shadowChar.png; path = ../iPhone/QBGames/PicoHero/shadowChar.png; sourceTree = SOURCE_ROOT; };
+		6B4FA4CC10E05FE20044F5DD /* PPMissilePanic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPMissilePanic.h; path = ../iPhone/QBGames/MissilePanic/PPMissilePanic.h; sourceTree = SOURCE_ROOT; };
+		6B4FA4CD10E05FE20044F5DD /* PPMissilePanic.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPMissilePanic.mm; path = ../iPhone/QBGames/MissilePanic/PPMissilePanic.mm; sourceTree = SOURCE_ROOT; };
+		6B4FA4CE10E05FE20044F5DD /* QBMissilePanic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBMissilePanic.cpp; path = ../iPhone/QBGames/MissilePanic/QBMissilePanic.cpp; sourceTree = SOURCE_ROOT; };
+		6B4FA4CF10E05FE20044F5DD /* QBMissilePanic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBMissilePanic.h; path = ../iPhone/QBGames/MissilePanic/QBMissilePanic.h; sourceTree = SOURCE_ROOT; };
+		6B9635F210C0AE6F00F0527D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		6B96361210C0AED500F0527D /* PPCarRace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPCarRace.h; path = ../iPhone/QBGames/CarRace/PPCarRace.h; sourceTree = SOURCE_ROOT; };
+		6B96361310C0AED500F0527D /* PPCarRace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPCarRace.mm; path = ../iPhone/QBGames/CarRace/PPCarRace.mm; sourceTree = SOURCE_ROOT; };
+		6B96361410C0AED500F0527D /* QBCarRace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBCarRace.h; path = ../iPhone/QBGames/CarRace/QBCarRace.h; sourceTree = SOURCE_ROOT; };
+		6B96361510C0AED500F0527D /* QBCarRace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBCarRace.cpp; path = ../iPhone/QBGames/CarRace/QBCarRace.cpp; sourceTree = SOURCE_ROOT; };
+		6B96361710C0AED500F0527D /* CarRaceMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CarRaceMap.plist; path = ../iPhone/QBGames/CarRace/CarRaceMap.plist; sourceTree = SOURCE_ROOT; };
+		6B96361D10C0AF1C00F0527D /* QBGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBGameController.h; path = ../iPhone/QBGameSystem/QBGameController.h; sourceTree = SOURCE_ROOT; };
+		6B96361E10C0AF1C00F0527D /* QBGameController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = QBGameController.mm; path = ../iPhone/QBGameSystem/QBGameController.mm; sourceTree = SOURCE_ROOT; };
+		6B96361F10C0AF1C00F0527D /* QBGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBGame.h; path = ../iPhone/QBGameSystem/QBGame.h; sourceTree = SOURCE_ROOT; };
+		6B96362010C0AF1C00F0527D /* QBGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBGame.cpp; path = ../iPhone/QBGameSystem/QBGame.cpp; sourceTree = SOURCE_ROOT; };
+		6B96362110C0AF1C00F0527D /* QBMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBMenu.h; path = ../iPhone/QBGameSystem/QBMenu.h; sourceTree = SOURCE_ROOT; };
+		6B96362210C0AF1C00F0527D /* QBMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBMenu.cpp; path = ../iPhone/QBGameSystem/QBMenu.cpp; sourceTree = SOURCE_ROOT; };
+		6B96362310C0AF1C00F0527D /* QBRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBRect.cpp; path = ../iPhone/QBGameSystem/QBRect.cpp; sourceTree = SOURCE_ROOT; };
+		6B96362410C0AF1C00F0527D /* QBRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBRect.h; path = ../iPhone/QBGameSystem/QBRect.h; sourceTree = SOURCE_ROOT; };
+		6B96362510C0AF1C00F0527D /* QBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBUtil.h; path = ../iPhone/QBGameSystem/QBUtil.h; sourceTree = SOURCE_ROOT; };
+		6B96362610C0AF1C00F0527D /* QBUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBUtil.cpp; path = ../iPhone/QBGameSystem/QBUtil.cpp; sourceTree = SOURCE_ROOT; };
+		6B96362D10C0AF8700F0527D /* PPGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGame.h; path = ../iPhone/PPGame/PPGameView/PPGame.h; sourceTree = SOURCE_ROOT; };
+		6B96362E10C0AF8700F0527D /* PPGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPGame.mm; path = ../iPhone/PPGame/PPGameView/PPGame.mm; sourceTree = SOURCE_ROOT; };
+		6B96362F10C0AF8700F0527D /* PPGameDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameDef.h; path = ../iPhone/PPGame/PPGameView/PPGameDef.h; sourceTree = SOURCE_ROOT; };
+		6B96363010C0AF8700F0527D /* PPGameSplite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameSplite.h; path = ../iPhone/PPGame/PPGameView/PPGameSplite.h; sourceTree = SOURCE_ROOT; };
+		6B96363110C0AF8700F0527D /* PPGameSplite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPGameSplite.cpp; path = ../iPhone/PPGame/PPGameView/PPGameSplite.cpp; sourceTree = SOURCE_ROOT; };
+		6B96363610C0AF8700F0527D /* PPGamePoly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPGamePoly.cpp; path = ../iPhone/PPGame/PPGameView/PPGamePoly.cpp; sourceTree = SOURCE_ROOT; };
+		6B96363710C0AF8700F0527D /* PPGamePoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGamePoly.h; path = ../iPhone/PPGame/PPGameView/PPGamePoly.h; sourceTree = SOURCE_ROOT; };
+		6B96364F10C0B27F00F0527D /* PPGameUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPGameUtil.mm; path = ../iPhone/PPGame/PPGameUtil/PPGameUtil.mm; sourceTree = SOURCE_ROOT; };
+		6B96365010C0B27F00F0527D /* PPGameUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameUtil.h; path = ../iPhone/PPGame/PPGameUtil/PPGameUtil.h; sourceTree = SOURCE_ROOT; };
+		6B96366C10C0B40B00F0527D /* PPGameMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameMap.h; path = ../iPhone/PPGame/PPGameUtil/PPGameMap.h; sourceTree = SOURCE_ROOT; };
+		6B96366D10C0B40B00F0527D /* PPGameMap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPGameMap.mm; path = ../iPhone/PPGame/PPGameUtil/PPGameMap.mm; sourceTree = SOURCE_ROOT; };
+		6B96367910C0B42B00F0527D /* PPGameMapData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameMapData.h; path = ../iPhone/PPGame/PPGameUtil/PPGameMapData.h; sourceTree = SOURCE_ROOT; };
+		6B96367A10C0B42B00F0527D /* PPGameMapData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPGameMapData.cpp; path = ../iPhone/PPGame/PPGameUtil/PPGameMapData.cpp; sourceTree = SOURCE_ROOT; };
+		6B9636B210C0B70E00F0527D /* PPGameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameButton.h; path = ../iPhone/PPGame/PPGameUtil/PPGameButton.h; sourceTree = SOURCE_ROOT; };
+		6B9636B310C0B70E00F0527D /* PPGameButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPGameButton.cpp; path = ../iPhone/PPGame/PPGameUtil/PPGameButton.cpp; sourceTree = SOURCE_ROOT; };
+		6B9636C310C0B84600F0527D /* PPGameBGM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGameBGM.h; sourceTree = "<group>"; };
+		6B9636C410C0B84600F0527D /* PPGameBGM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPGameBGM.m; sourceTree = "<group>"; };
+		6B9636D710C0B92C00F0527D /* PPGameText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameText.h; path = ../iPhone/PPGame/PPGameView/PPGameText.h; sourceTree = SOURCE_ROOT; };
+		6B9636D810C0B92C00F0527D /* PPGameText.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPGameText.mm; path = ../iPhone/PPGame/PPGameView/PPGameText.mm; sourceTree = SOURCE_ROOT; };
+		6B9636DF10C0B9D900F0527D /* PPGameRunlength.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = PPGameRunlength.c; path = ../iPhone/PPGame/PPGameUtil/PPGameRunlength.c; sourceTree = SOURCE_ROOT; };
+		6B9636E010C0B9D900F0527D /* PPGameRunlength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameRunlength.h; path = ../iPhone/PPGame/PPGameUtil/PPGameRunlength.h; sourceTree = SOURCE_ROOT; };
+		6B9638E610C0C79C00F0527D /* PPBlueBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPBlueBall.h; path = ../iPhone/QBGames/BlueBall/PPBlueBall.h; sourceTree = SOURCE_ROOT; };
+		6B9638E710C0C79C00F0527D /* PPBlueBall.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPBlueBall.mm; path = ../iPhone/QBGames/BlueBall/PPBlueBall.mm; sourceTree = SOURCE_ROOT; };
+		6B9638E810C0C79C00F0527D /* QBBlueBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBBlueBall.h; path = ../iPhone/QBGames/BlueBall/QBBlueBall.h; sourceTree = SOURCE_ROOT; };
+		6B9638E910C0C79C00F0527D /* QBBlueBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBBlueBall.cpp; path = ../iPhone/QBGames/BlueBall/QBBlueBall.cpp; sourceTree = SOURCE_ROOT; };
+		6B9638EA10C0C79C00F0527D /* QBBlueBallStageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBBlueBallStageData.h; path = ../iPhone/QBGames/BlueBall/QBBlueBallStageData.h; sourceTree = SOURCE_ROOT; };
+		6B9639C810C0FAD900F0527D /* PPGrafSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGrafSample.h; path = ../iPhone/QBGames/GrafSample/PPGrafSample.h; sourceTree = SOURCE_ROOT; };
+		6B9639C910C0FAD900F0527D /* PPGrafSample.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPGrafSample.mm; path = ../iPhone/QBGames/GrafSample/PPGrafSample.mm; sourceTree = SOURCE_ROOT; };
+		6B9639CA10C0FAD900F0527D /* QBGrafSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBGrafSample.cpp; path = ../iPhone/QBGames/GrafSample/QBGrafSample.cpp; sourceTree = SOURCE_ROOT; };
+		6B9639CB10C0FAD900F0527D /* QBGrafSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBGrafSample.h; path = ../iPhone/QBGames/GrafSample/QBGrafSample.h; sourceTree = SOURCE_ROOT; };
+		6B963B6910C11F2D00F0527D /* PPTShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTShadow.h; path = ../iPhone/QBGames/TowerOfShadow/PPTShadow.h; sourceTree = SOURCE_ROOT; };
+		6B963B6A10C11F2D00F0527D /* PPTShadow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPTShadow.mm; path = ../iPhone/QBGames/TowerOfShadow/PPTShadow.mm; sourceTree = SOURCE_ROOT; };
+		6B963B6B10C11F2D00F0527D /* QBTShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBTShadow.h; path = ../iPhone/QBGames/TowerOfShadow/QBTShadow.h; sourceTree = SOURCE_ROOT; };
+		6B963B6C10C11F2D00F0527D /* QBTShadow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBTShadow.cpp; path = ../iPhone/QBGames/TowerOfShadow/QBTShadow.cpp; sourceTree = SOURCE_ROOT; };
+		6B963B6F10C11F3600F0527D /* PPPicoHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPPicoHero.h; path = ../iPhone/QBGames/PicoHero/PPPicoHero.h; sourceTree = SOURCE_ROOT; };
+		6B963B7010C11F3600F0527D /* PPPicoHero.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPPicoHero.mm; path = ../iPhone/QBGames/PicoHero/PPPicoHero.mm; sourceTree = SOURCE_ROOT; };
+		6B963B7110C11F3600F0527D /* QBPicoHero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBPicoHero.h; path = ../iPhone/QBGames/PicoHero/QBPicoHero.h; sourceTree = SOURCE_ROOT; };
+		6B963B7210C11F3600F0527D /* QBPicoHero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBPicoHero.cpp; path = ../iPhone/QBGames/PicoHero/QBPicoHero.cpp; sourceTree = SOURCE_ROOT; };
+		6B963B7310C11F3600F0527D /* QBPicoHero.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBPicoHero.plist; path = ../iPhone/QBGames/PicoHero/QBPicoHero.plist; sourceTree = SOURCE_ROOT; };
+		6B963B7710C11F3E00F0527D /* PPPicoHero2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPPicoHero2.h; path = ../iPhone/QBGames/PicoHero/PPPicoHero2.h; sourceTree = SOURCE_ROOT; };
+		6B963B7810C11F3E00F0527D /* PPPicoHero2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPPicoHero2.mm; path = ../iPhone/QBGames/PicoHero/PPPicoHero2.mm; sourceTree = SOURCE_ROOT; };
+		6B963B7910C11F3E00F0527D /* QBPicoHero2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBPicoHero2.h; path = ../iPhone/QBGames/PicoHero/QBPicoHero2.h; sourceTree = SOURCE_ROOT; };
+		6B963B7A10C11F3E00F0527D /* QBPicoHero2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBPicoHero2.cpp; path = ../iPhone/QBGames/PicoHero/QBPicoHero2.cpp; sourceTree = SOURCE_ROOT; };
+		6B963B7B10C11F3E00F0527D /* QBPicoHero2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBPicoHero2.plist; path = ../iPhone/QBGames/PicoHero/QBPicoHero2.plist; sourceTree = SOURCE_ROOT; };
+		6B9A24AE10C0A3C00094406C /* PPGameView_App.h */ = {isa = PBXFileReference; fileEncoding = 2147483649; lastKnownFileType = sourcecode.c.h; path = PPGameView_App.h; sourceTree = "<group>"; };
+		6B9A24AF10C0A3C00094406C /* PPGameView_App.mm */ = {isa = PBXFileReference; fileEncoding = 2147483649; lastKnownFileType = sourcecode.cpp.objcpp; path = PPGameView_App.mm; sourceTree = "<group>"; };
+		6B9A24B210C0A44E0094406C /* QBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBController.h; sourceTree = "<group>"; };
+		6B9A24B310C0A44E0094406C /* QBController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QBController.mm; sourceTree = "<group>"; };
+		6B9A24B710C0A6B00094406C /* PPGameSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameSound.h; path = ../iPhone/PPGame/PPGameSound/PPGameSound.h; sourceTree = SOURCE_ROOT; };
+		6B9A24B810C0A6B00094406C /* PPGameSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PPGameSound.cpp; path = ../iPhone/PPGame/PPGameSound/PPGameSound.cpp; sourceTree = SOURCE_ROOT; };
+		6B9A24BA10C0A6BB0094406C /* QBSound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBSound.cpp; path = ../iPhone/PPGame/PPGameSound/QBSound.cpp; sourceTree = SOURCE_ROOT; };
+		6B9A24BB10C0A6BB0094406C /* QBSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBSound.h; path = ../iPhone/PPGame/PPGameSound/QBSound.h; sourceTree = SOURCE_ROOT; };
+		6B9A24BC10C0A6BB0094406C /* QBSoundMac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBSoundMac.cpp; path = ../iPhone/PPGame/PPGameSound/QBSoundMac.cpp; sourceTree = SOURCE_ROOT; };
+		6B9A24BD10C0A6BB0094406C /* QBSoundMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBSoundMac.h; path = ../iPhone/PPGame/PPGameSound/QBSoundMac.h; sourceTree = SOURCE_ROOT; };
+		6B9A24C210C0A6DD0094406C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		6B9A24D610C0A6E30094406C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		6B9A24EB10C0A6E80094406C /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
+		6B9A250D10C0AA9E0094406C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		6BAF4DD210F5831300688947 /* QBCommonGrobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QBCommonGrobal.m; path = QBCommon/QBCommonGrobal.m; sourceTree = "<group>"; };
+		6BC7D75510D857150022D4FE /* MissilePanic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MissilePanic.png; path = ../iPhone/QBGames/MissilePanic/MissilePanic.png; sourceTree = SOURCE_ROOT; };
+		6BDC6A091101D39700A574A1 /* PPTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTemplate.h; path = ../iPhone/QBGames/_Template/PPTemplate.h; sourceTree = SOURCE_ROOT; };
+		6BDC6A0A1101D39700A574A1 /* PPTemplate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPTemplate.mm; path = ../iPhone/QBGames/_Template/PPTemplate.mm; sourceTree = SOURCE_ROOT; };
+		6BDC6A0B1101D39700A574A1 /* QBTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBTemplate.cpp; path = ../iPhone/QBGames/_Template/QBTemplate.cpp; sourceTree = SOURCE_ROOT; };
+		6BDC6A0C1101D39700A574A1 /* QBTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBTemplate.h; path = ../iPhone/QBGames/_Template/QBTemplate.h; sourceTree = SOURCE_ROOT; };
+		6BDC6AF11101DFC100A574A1 /* QBGameInstant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBGameInstant.cpp; path = ../iPhone/QBGameSystem/QBGameInstant.cpp; sourceTree = SOURCE_ROOT; };
+		6BDC6AF21101DFC100A574A1 /* QBGameInstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBGameInstant.h; path = ../iPhone/QBGameSystem/QBGameInstant.h; sourceTree = SOURCE_ROOT; };
+		6BDC6B7A1101E6CB00A574A1 /* QBTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QBTemplate.png; path = ../iPhone/QBGames/_Template/QBTemplate.png; sourceTree = SOURCE_ROOT; };
+		6BDC6C711101F92800A574A1 /* PPTankGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPTankGame.h; path = ../iPhone/QBGames/TankGame/PPTankGame.h; sourceTree = SOURCE_ROOT; };
+		6BDC6C721101F92800A574A1 /* PPTankGame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PPTankGame.mm; path = ../iPhone/QBGames/TankGame/PPTankGame.mm; sourceTree = SOURCE_ROOT; };
+		6BDC6C731101F92800A574A1 /* QBTankGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QBTankGame.cpp; path = ../iPhone/QBGames/TankGame/QBTankGame.cpp; sourceTree = SOURCE_ROOT; };
+		6BDC6C741101F92800A574A1 /* QBTankGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QBTankGame.h; path = ../iPhone/QBGames/TankGame/QBTankGame.h; sourceTree = SOURCE_ROOT; };
+		6BDC6C751101F92800A574A1 /* QBTankGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QBTankGame.png; path = ../iPhone/QBGames/TankGame/QBTankGame.png; sourceTree = SOURCE_ROOT; };
+		6BE90CCB10D9B84700080E36 /* QBMissilePanic01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic01.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic01.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CCC10D9B84700080E36 /* QBMissilePanic02.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic02.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic02.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CCD10D9B84700080E36 /* QBMissilePanic03.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic03.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic03.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CCE10D9B84700080E36 /* QBMissilePanic04.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic04.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic04.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CCF10D9B84700080E36 /* QBMissilePanic05.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic05.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic05.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD010D9B84700080E36 /* QBMissilePanic06.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic06.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic06.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD110D9B84700080E36 /* QBMissilePanic07.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic07.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic07.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD210D9B84700080E36 /* QBMissilePanic08.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic08.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic08.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD310D9B84700080E36 /* QBMissilePanic09.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic09.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic09.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD410D9B84700080E36 /* QBMissilePanic10.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic10.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic10.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD510D9B84700080E36 /* QBMissilePanic11.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic11.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic11.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD610D9B84700080E36 /* QBMissilePanic12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic12.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic12.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD710D9B84700080E36 /* QBMissilePanic13.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic13.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic13.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD810D9B84700080E36 /* QBMissilePanic14.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic14.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic14.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CD910D9B84700080E36 /* QBMissilePanic15.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic15.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic15.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CDA10D9B84700080E36 /* QBMissilePanic16.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic16.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic16.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CDB10D9B84700080E36 /* QBMissilePanic17.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic17.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic17.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CDC10D9B84700080E36 /* QBMissilePanic18.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic18.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic18.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CDD10D9B84700080E36 /* QBMissilePanic19.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic19.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic19.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CDE10D9B84700080E36 /* QBMissilePanic20.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic20.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic20.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CDF10D9B84700080E36 /* QBMissilePanic21.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic21.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic21.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE010D9B84700080E36 /* QBMissilePanic22.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic22.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic22.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE110D9B84700080E36 /* QBMissilePanic23.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic23.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic23.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE210D9B84700080E36 /* QBMissilePanic24.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic24.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic24.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE310D9B84700080E36 /* QBMissilePanic25.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic25.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic25.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE410D9B84700080E36 /* QBMissilePanic26.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic26.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic26.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE510D9B84700080E36 /* QBMissilePanic27.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic27.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic27.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE610D9B84700080E36 /* QBMissilePanic28.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic28.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic28.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE710D9B84700080E36 /* QBMissilePanic29.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic29.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic29.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE810D9B84700080E36 /* QBMissilePanic30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic30.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic30.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CE910D9B84700080E36 /* QBMissilePanic31.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic31.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic31.plist; sourceTree = SOURCE_ROOT; };
+		6BE90CEA10D9B84700080E36 /* QBMissilePanic32.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QBMissilePanic32.plist; path = ../iPhone/QBGames/MissilePanic/MapData/QBMissilePanic32.plist; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* PicoPicoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicoPicoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				6B9A24C310C0A6DD0094406C /* OpenGL.framework in Frameworks */,
+				6B9A24D710C0A6E30094406C /* AudioToolbox.framework in Frameworks */,
+				6B9A24EC10C0A6E80094406C /* AudioUnit.framework in Frameworks */,
+				6B9A250E10C0AA9E0094406C /* IOKit.framework in Frameworks */,
+				6B9635F310C0AE6F00F0527D /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6BAF4DD210F5831300688947 /* QBCommonGrobal.m */,
+				6BA8FDF510F2FFCC0041546B /* QBGames */,
+				6B9638E210C0C78100F0527D /* System */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B9A24C210C0A6DD0094406C /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B9635F210C0AE6F00F0527D /* Carbon.framework */,
+				6B9A250D10C0AA9E0094406C /* IOKit.framework */,
+				6B9A24EB10C0A6E80094406C /* AudioUnit.framework */,
+				6B9A24D610C0A6E30094406C /* AudioToolbox.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* PicoPicoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* PicoPicoApp */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = PicoPicoApp;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* PicoPicoApp_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B1DDD6A10F57ED5002E2303 /* PPGameView */ = {
+			isa = PBXGroup;
+			children = (
+				6B96362D10C0AF8700F0527D /* PPGame.h */,
+				6B96362E10C0AF8700F0527D /* PPGame.mm */,
+				6B96362F10C0AF8700F0527D /* PPGameDef.h */,
+				6B96363010C0AF8700F0527D /* PPGameSplite.h */,
+				6B96363110C0AF8700F0527D /* PPGameSplite.cpp */,
+				6B96363710C0AF8700F0527D /* PPGamePoly.h */,
+				6B96363610C0AF8700F0527D /* PPGamePoly.cpp */,
+				6B9636D710C0B92C00F0527D /* PPGameText.h */,
+				6B9636D810C0B92C00F0527D /* PPGameText.mm */,
+			);
+			name = PPGameView;
+			sourceTree = "<group>";
+		};
+		6B1DDD6B10F57F04002E2303 /* PPGameSound */ = {
+			isa = PBXGroup;
+			children = (
+				6B9A24B710C0A6B00094406C /* PPGameSound.h */,
+				6B9A24B810C0A6B00094406C /* PPGameSound.cpp */,
+				6B9A24BA10C0A6BB0094406C /* QBSound.cpp */,
+				6B9A24BB10C0A6BB0094406C /* QBSound.h */,
+				6B9A24BC10C0A6BB0094406C /* QBSoundMac.cpp */,
+				6B9A24BD10C0A6BB0094406C /* QBSoundMac.h */,
+			);
+			name = PPGameSound;
+			sourceTree = "<group>";
+		};
+		6B9635F810C0AEB000F0527D /* PPAppSystem */ = {
+			isa = PBXGroup;
+			children = (
+				6B9A24AE10C0A3C00094406C /* PPGameView_App.h */,
+				6B9A24AF10C0A3C00094406C /* PPGameView_App.mm */,
+				6B9636C310C0B84600F0527D /* PPGameBGM.h */,
+				6B9636C410C0B84600F0527D /* PPGameBGM.m */,
+				6B9A24B210C0A44E0094406C /* QBController.h */,
+				6B9A24B310C0A44E0094406C /* QBController.mm */,
+			);
+			path = PPAppSystem;
+			sourceTree = "<group>";
+		};
+		6B96361C10C0AEDC00F0527D /* CarRace */ = {
+			isa = PBXGroup;
+			children = (
+				6B96361210C0AED500F0527D /* PPCarRace.h */,
+				6B96361310C0AED500F0527D /* PPCarRace.mm */,
+				6B96361410C0AED500F0527D /* QBCarRace.h */,
+				6B96361510C0AED500F0527D /* QBCarRace.cpp */,
+				6B96361710C0AED500F0527D /* CarRaceMap.plist */,
+				6B1DDD7910F58016002E2303 /* carrace.h */,
+				6B1DDD7A10F58016002E2303 /* carrace.png */,
+			);
+			name = CarRace;
+			sourceTree = "<group>";
+		};
+		6B96362C10C0AF1F00F0527D /* QBGameSystem */ = {
+			isa = PBXGroup;
+			children = (
+				6B96361D10C0AF1C00F0527D /* QBGameController.h */,
+				6B96361E10C0AF1C00F0527D /* QBGameController.mm */,
+				6B96361F10C0AF1C00F0527D /* QBGame.h */,
+				6B96362010C0AF1C00F0527D /* QBGame.cpp */,
+				6BDC6AF21101DFC100A574A1 /* QBGameInstant.h */,
+				6BDC6AF11101DFC100A574A1 /* QBGameInstant.cpp */,
+				6B96362110C0AF1C00F0527D /* QBMenu.h */,
+				6B96362210C0AF1C00F0527D /* QBMenu.cpp */,
+				6B96362410C0AF1C00F0527D /* QBRect.h */,
+				6B96362310C0AF1C00F0527D /* QBRect.cpp */,
+				6B96362510C0AF1C00F0527D /* QBUtil.h */,
+				6B96362610C0AF1C00F0527D /* QBUtil.cpp */,
+			);
+			name = QBGameSystem;
+			sourceTree = "<group>";
+		};
+		6B96368510C0B46200F0527D /* QBImage */ = {
+			isa = PBXGroup;
+			children = (
+				6B1DDD5F10F57DED002E2303 /* font.h */,
+				6B1DDD6010F57DED002E2303 /* font.png */,
+				6B1DDD6110F57DED002E2303 /* font2.h */,
+				6B1DDD6210F57DED002E2303 /* font2.png */,
+				6B1DDD6310F57DED002E2303 /* key.h */,
+				6B1DDD6410F57DED002E2303 /* key.png */,
+			);
+			name = QBImage;
+			sourceTree = "<group>";
+		};
+		6B9638D010C0C6A800F0527D /* PPGameUtil */ = {
+			isa = PBXGroup;
+			children = (
+				6B96365010C0B27F00F0527D /* PPGameUtil.h */,
+				6B96364F10C0B27F00F0527D /* PPGameUtil.mm */,
+				6B9636E010C0B9D900F0527D /* PPGameRunlength.h */,
+				6B9636DF10C0B9D900F0527D /* PPGameRunlength.c */,
+				6B96366C10C0B40B00F0527D /* PPGameMap.h */,
+				6B96366D10C0B40B00F0527D /* PPGameMap.mm */,
+				6B96367910C0B42B00F0527D /* PPGameMapData.h */,
+				6B96367A10C0B42B00F0527D /* PPGameMapData.cpp */,
+				6B9636B210C0B70E00F0527D /* PPGameButton.h */,
+				6B9636B310C0B70E00F0527D /* PPGameButton.cpp */,
+			);
+			name = PPGameUtil;
+			sourceTree = "<group>";
+		};
+		6B9638E210C0C78100F0527D /* System */ = {
+			isa = PBXGroup;
+			children = (
+				6B96368510C0B46200F0527D /* QBImage */,
+				6B96362C10C0AF1F00F0527D /* QBGameSystem */,
+				6B1DDD6A10F57ED5002E2303 /* PPGameView */,
+				6B9638D010C0C6A800F0527D /* PPGameUtil */,
+				6B1DDD6B10F57F04002E2303 /* PPGameSound */,
+				6B9635F810C0AEB000F0527D /* PPAppSystem */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		6B9638E510C0C78C00F0527D /* PicoPuzzle */ = {
+			isa = PBXGroup;
+			children = (
+				6B9638E610C0C79C00F0527D /* PPBlueBall.h */,
+				6B9638E710C0C79C00F0527D /* PPBlueBall.mm */,
+				6B9638E810C0C79C00F0527D /* QBBlueBall.h */,
+				6B9638E910C0C79C00F0527D /* QBBlueBall.cpp */,
+				6B9638EA10C0C79C00F0527D /* QBBlueBallStageData.h */,
+				6B1DDD7C10F58023002E2303 /* BlueBallChar.h */,
+				6B1DDD7D10F58023002E2303 /* BlueBallChar.png */,
+			);
+			name = PicoPuzzle;
+			sourceTree = "<group>";
+		};
+		6B9639CE10C0FAE000F0527D /* GrafSample */ = {
+			isa = PBXGroup;
+			children = (
+				6B9639C810C0FAD900F0527D /* PPGrafSample.h */,
+				6B9639C910C0FAD900F0527D /* PPGrafSample.mm */,
+				6B9639CB10C0FAD900F0527D /* QBGrafSample.h */,
+				6B9639CA10C0FAD900F0527D /* QBGrafSample.cpp */,
+			);
+			name = GrafSample;
+			sourceTree = "<group>";
+		};
+		6B963B6210C11F0D00F0527D /* PicoHero */ = {
+			isa = PBXGroup;
+			children = (
+				6B963B6F10C11F3600F0527D /* PPPicoHero.h */,
+				6B963B7010C11F3600F0527D /* PPPicoHero.mm */,
+				6B963B7110C11F3600F0527D /* QBPicoHero.h */,
+				6B963B7210C11F3600F0527D /* QBPicoHero.cpp */,
+				6B963B7310C11F3600F0527D /* QBPicoHero.plist */,
+				6B1DDD8110F5803C002E2303 /* QBPicoHero.h */,
+				6B1DDD8810F5805F002E2303 /* shadowChar.h */,
+				6B1DDD8910F5805F002E2303 /* shadowChar.png */,
+			);
+			name = PicoHero;
+			sourceTree = "<group>";
+		};
+		6B963B6510C11F1800F0527D /* PicoHero2 */ = {
+			isa = PBXGroup;
+			children = (
+				6B963B7710C11F3E00F0527D /* PPPicoHero2.h */,
+				6B963B7810C11F3E00F0527D /* PPPicoHero2.mm */,
+				6B963B7910C11F3E00F0527D /* QBPicoHero2.h */,
+				6B963B7A10C11F3E00F0527D /* QBPicoHero2.cpp */,
+				6B963B7B10C11F3E00F0527D /* QBPicoHero2.plist */,
+			);
+			name = PicoHero2;
+			sourceTree = "<group>";
+		};
+		6B963B6810C11F1F00F0527D /* TowerOfShadow */ = {
+			isa = PBXGroup;
+			children = (
+				6B963B6910C11F2D00F0527D /* PPTShadow.h */,
+				6B963B6A10C11F2D00F0527D /* PPTShadow.mm */,
+				6B963B6B10C11F2D00F0527D /* QBTShadow.h */,
+				6B963B6C10C11F2D00F0527D /* QBTShadow.cpp */,
+				6B1DDD8410F5804B002E2303 /* tshadowChar.h */,
+				6B1DDD8510F5804B002E2303 /* tshadowChar.png */,
+			);
+			name = TowerOfShadow;
+			sourceTree = "<group>";
+		};
+		6BA8FDF510F2FFCC0041546B /* QBGames */ = {
+			isa = PBXGroup;
+			children = (
+				6BDC6A111101D39B00A574A1 /* Template */,
+				6BDC6C791101F92F00A574A1 /* TankGame */,
+				6BC7D74D10D855890022D4FE /* MissilePanic */,
+				6B963B6810C11F1F00F0527D /* TowerOfShadow */,
+				6B963B6510C11F1800F0527D /* PicoHero2 */,
+				6B963B6210C11F0D00F0527D /* PicoHero */,
+				6B9639CE10C0FAE000F0527D /* GrafSample */,
+				6B9638E510C0C78C00F0527D /* PicoPuzzle */,
+				6B96361C10C0AEDC00F0527D /* CarRace */,
+			);
+			name = QBGames;
+			sourceTree = "<group>";
+		};
+		6BC7D74D10D855890022D4FE /* MissilePanic */ = {
+			isa = PBXGroup;
+			children = (
+				6B4FA4CC10E05FE20044F5DD /* PPMissilePanic.h */,
+				6B4FA4CD10E05FE20044F5DD /* PPMissilePanic.mm */,
+				6B4FA4CF10E05FE20044F5DD /* QBMissilePanic.h */,
+				6B4FA4CE10E05FE20044F5DD /* QBMissilePanic.cpp */,
+				6BC7D75510D857150022D4FE /* MissilePanic.png */,
+				6BE90D2D10D9B84D00080E36 /* MapData */,
+			);
+			name = MissilePanic;
+			sourceTree = "<group>";
+		};
+		6BDC6A111101D39B00A574A1 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				6BDC6A091101D39700A574A1 /* PPTemplate.h */,
+				6BDC6A0A1101D39700A574A1 /* PPTemplate.mm */,
+				6BDC6A0C1101D39700A574A1 /* QBTemplate.h */,
+				6BDC6A0B1101D39700A574A1 /* QBTemplate.cpp */,
+				6BDC6B7A1101E6CB00A574A1 /* QBTemplate.png */,
+			);
+			name = Template;
+			sourceTree = "<group>";
+		};
+		6BDC6C791101F92F00A574A1 /* TankGame */ = {
+			isa = PBXGroup;
+			children = (
+				6BDC6C711101F92800A574A1 /* PPTankGame.h */,
+				6BDC6C721101F92800A574A1 /* PPTankGame.mm */,
+				6BDC6C741101F92800A574A1 /* QBTankGame.h */,
+				6BDC6C731101F92800A574A1 /* QBTankGame.cpp */,
+				6BDC6C751101F92800A574A1 /* QBTankGame.png */,
+			);
+			name = TankGame;
+			sourceTree = "<group>";
+		};
+		6BE90D2D10D9B84D00080E36 /* MapData */ = {
+			isa = PBXGroup;
+			children = (
+				6BE90CCB10D9B84700080E36 /* QBMissilePanic01.plist */,
+				6BE90CCC10D9B84700080E36 /* QBMissilePanic02.plist */,
+				6BE90CCD10D9B84700080E36 /* QBMissilePanic03.plist */,
+				6BE90CCE10D9B84700080E36 /* QBMissilePanic04.plist */,
+				6BE90CCF10D9B84700080E36 /* QBMissilePanic05.plist */,
+				6BE90CD010D9B84700080E36 /* QBMissilePanic06.plist */,
+				6BE90CD110D9B84700080E36 /* QBMissilePanic07.plist */,
+				6BE90CD210D9B84700080E36 /* QBMissilePanic08.plist */,
+				6BE90CD310D9B84700080E36 /* QBMissilePanic09.plist */,
+				6BE90CD410D9B84700080E36 /* QBMissilePanic10.plist */,
+				6BE90CD510D9B84700080E36 /* QBMissilePanic11.plist */,
+				6BE90CD610D9B84700080E36 /* QBMissilePanic12.plist */,
+				6BE90CD710D9B84700080E36 /* QBMissilePanic13.plist */,
+				6BE90CD810D9B84700080E36 /* QBMissilePanic14.plist */,
+				6BE90CD910D9B84700080E36 /* QBMissilePanic15.plist */,
+				6BE90CDA10D9B84700080E36 /* QBMissilePanic16.plist */,
+				6BE90CDB10D9B84700080E36 /* QBMissilePanic17.plist */,
+				6BE90CDC10D9B84700080E36 /* QBMissilePanic18.plist */,
+				6BE90CDD10D9B84700080E36 /* QBMissilePanic19.plist */,
+				6BE90CDE10D9B84700080E36 /* QBMissilePanic20.plist */,
+				6BE90CDF10D9B84700080E36 /* QBMissilePanic21.plist */,
+				6BE90CE010D9B84700080E36 /* QBMissilePanic22.plist */,
+				6BE90CE110D9B84700080E36 /* QBMissilePanic23.plist */,
+				6BE90CE210D9B84700080E36 /* QBMissilePanic24.plist */,
+				6BE90CE310D9B84700080E36 /* QBMissilePanic25.plist */,
+				6BE90CE410D9B84700080E36 /* QBMissilePanic26.plist */,
+				6BE90CE510D9B84700080E36 /* QBMissilePanic27.plist */,
+				6BE90CE610D9B84700080E36 /* QBMissilePanic28.plist */,
+				6BE90CE710D9B84700080E36 /* QBMissilePanic29.plist */,
+				6BE90CE810D9B84700080E36 /* QBMissilePanic30.plist */,
+				6BE90CE910D9B84700080E36 /* QBMissilePanic31.plist */,
+				6BE90CEA10D9B84700080E36 /* QBMissilePanic32.plist */,
+			);
+			name = MapData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* PicoPicoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PicoPicoApp" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PicoPicoApp;
+			productInstallPath = "$(HOME)/Applications";
+			productName = PicoPicoApp;
+			productReference = 8D1107320486CEB800E47090 /* PicoPicoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PicoPicoApp" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* PicoPicoApp */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* PicoPicoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				6B96361B10C0AED500F0527D /* CarRaceMap.plist in Resources */,
+				6B963B7610C11F3600F0527D /* QBPicoHero.plist in Resources */,
+				6B963B7E10C11F3E00F0527D /* QBPicoHero2.plist in Resources */,
+				6BC7D75610D857150022D4FE /* MissilePanic.png in Resources */,
+				6BE90CFB10D9B84700080E36 /* QBMissilePanic01.plist in Resources */,
+				6BE90CFC10D9B84700080E36 /* QBMissilePanic02.plist in Resources */,
+				6BE90CFD10D9B84700080E36 /* QBMissilePanic03.plist in Resources */,
+				6BE90CFE10D9B84700080E36 /* QBMissilePanic04.plist in Resources */,
+				6BE90CFF10D9B84700080E36 /* QBMissilePanic05.plist in Resources */,
+				6BE90D0010D9B84700080E36 /* QBMissilePanic06.plist in Resources */,
+				6BE90D0110D9B84700080E36 /* QBMissilePanic07.plist in Resources */,
+				6BE90D0210D9B84700080E36 /* QBMissilePanic08.plist in Resources */,
+				6BE90D0310D9B84700080E36 /* QBMissilePanic09.plist in Resources */,
+				6BE90D0410D9B84700080E36 /* QBMissilePanic10.plist in Resources */,
+				6BE90D0510D9B84700080E36 /* QBMissilePanic11.plist in Resources */,
+				6BE90D0610D9B84700080E36 /* QBMissilePanic12.plist in Resources */,
+				6BE90D0710D9B84700080E36 /* QBMissilePanic13.plist in Resources */,
+				6BE90D0810D9B84700080E36 /* QBMissilePanic14.plist in Resources */,
+				6BE90D0910D9B84700080E36 /* QBMissilePanic15.plist in Resources */,
+				6BE90D0A10D9B84700080E36 /* QBMissilePanic16.plist in Resources */,
+				6BE90D0B10D9B84700080E36 /* QBMissilePanic17.plist in Resources */,
+				6BE90D0C10D9B84700080E36 /* QBMissilePanic18.plist in Resources */,
+				6BE90D0D10D9B84700080E36 /* QBMissilePanic19.plist in Resources */,
+				6BE90D0E10D9B84700080E36 /* QBMissilePanic20.plist in Resources */,
+				6BE90D0F10D9B84700080E36 /* QBMissilePanic21.plist in Resources */,
+				6BE90D1010D9B84700080E36 /* QBMissilePanic22.plist in Resources */,
+				6BE90D1110D9B84700080E36 /* QBMissilePanic23.plist in Resources */,
+				6BE90D1210D9B84700080E36 /* QBMissilePanic24.plist in Resources */,
+				6BE90D1310D9B84700080E36 /* QBMissilePanic25.plist in Resources */,
+				6BE90D1410D9B84700080E36 /* QBMissilePanic26.plist in Resources */,
+				6BE90D1510D9B84700080E36 /* QBMissilePanic27.plist in Resources */,
+				6BE90D1610D9B84700080E36 /* QBMissilePanic28.plist in Resources */,
+				6BE90D1710D9B84700080E36 /* QBMissilePanic29.plist in Resources */,
+				6BE90D1810D9B84700080E36 /* QBMissilePanic30.plist in Resources */,
+				6BE90D1910D9B84700080E36 /* QBMissilePanic31.plist in Resources */,
+				6BE90D1A10D9B84700080E36 /* QBMissilePanic32.plist in Resources */,
+				6B1DDD6510F57DED002E2303 /* font.png in Resources */,
+				6B1DDD6610F57DED002E2303 /* font2.png in Resources */,
+				6B1DDD6710F57DED002E2303 /* key.png in Resources */,
+				6B1DDD7B10F58016002E2303 /* carrace.png in Resources */,
+				6B1DDD7E10F58023002E2303 /* BlueBallChar.png in Resources */,
+				6B1DDD8610F5804B002E2303 /* tshadowChar.png in Resources */,
+				6B1DDD8A10F5805F002E2303 /* shadowChar.png in Resources */,
+				6BDC6B7B1101E6CB00A574A1 /* QBTemplate.png in Resources */,
+				6BDC6C781101F92800A574A1 /* QBTankGame.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				6B9A24B010C0A3C00094406C /* PPGameView_App.mm in Sources */,
+				6B9A24B410C0A44E0094406C /* QBController.mm in Sources */,
+				6B9A24B910C0A6B00094406C /* PPGameSound.cpp in Sources */,
+				6B9A24BE10C0A6BB0094406C /* QBSound.cpp in Sources */,
+				6B9A24BF10C0A6BB0094406C /* QBSoundMac.cpp in Sources */,
+				6B96361810C0AED500F0527D /* PPCarRace.mm in Sources */,
+				6B96361910C0AED500F0527D /* QBCarRace.cpp in Sources */,
+				6B96362710C0AF1C00F0527D /* QBGameController.mm in Sources */,
+				6B96362810C0AF1C00F0527D /* QBGame.cpp in Sources */,
+				6B96362910C0AF1C00F0527D /* QBMenu.cpp in Sources */,
+				6B96362A10C0AF1C00F0527D /* QBRect.cpp in Sources */,
+				6B96362B10C0AF1C00F0527D /* QBUtil.cpp in Sources */,
+				6B96363A10C0AF8700F0527D /* PPGame.mm in Sources */,
+				6B96363B10C0AF8700F0527D /* PPGameSplite.cpp in Sources */,
+				6B96363E10C0AF8700F0527D /* PPGamePoly.cpp in Sources */,
+				6B96365110C0B27F00F0527D /* PPGameUtil.mm in Sources */,
+				6B96366E10C0B40B00F0527D /* PPGameMap.mm in Sources */,
+				6B96367B10C0B42B00F0527D /* PPGameMapData.cpp in Sources */,
+				6B9636B410C0B70E00F0527D /* PPGameButton.cpp in Sources */,
+				6B9636C510C0B84600F0527D /* PPGameBGM.m in Sources */,
+				6B9636D910C0B92C00F0527D /* PPGameText.mm in Sources */,
+				6B9636E110C0B9D900F0527D /* PPGameRunlength.c in Sources */,
+				6B9638EB10C0C79C00F0527D /* PPBlueBall.mm in Sources */,
+				6B9638EC10C0C79C00F0527D /* QBBlueBall.cpp in Sources */,
+				6B9639CC10C0FAD900F0527D /* PPGrafSample.mm in Sources */,
+				6B9639CD10C0FAD900F0527D /* QBGrafSample.cpp in Sources */,
+				6B963B6D10C11F2D00F0527D /* PPTShadow.mm in Sources */,
+				6B963B6E10C11F2D00F0527D /* QBTShadow.cpp in Sources */,
+				6B963B7410C11F3600F0527D /* PPPicoHero.mm in Sources */,
+				6B963B7510C11F3600F0527D /* QBPicoHero.cpp in Sources */,
+				6B963B7C10C11F3E00F0527D /* PPPicoHero2.mm in Sources */,
+				6B963B7D10C11F3E00F0527D /* QBPicoHero2.cpp in Sources */,
+				6B4FA4D010E05FE20044F5DD /* PPMissilePanic.mm in Sources */,
+				6B4FA4D110E05FE20044F5DD /* QBMissilePanic.cpp in Sources */,
+				6BAF4DD310F5831300688947 /* QBCommonGrobal.m in Sources */,
+				6BDC6A0D1101D39700A574A1 /* PPTemplate.mm in Sources */,
+				6BDC6A0E1101D39700A574A1 /* QBTemplate.cpp in Sources */,
+				6BDC6AF41101DFC100A574A1 /* QBGameInstant.cpp in Sources */,
+				6BDC6C761101F92800A574A1 /* PPTankGame.mm in Sources */,
+				6BDC6C771101F92800A574A1 /* QBTankGame.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PicoPicoApp_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = PNG_NO_ASSEMBLER_CODE;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = PicoPicoApp;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PicoPicoApp_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = PNG_NO_ASSEMBLER_CODE;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = PicoPicoApp;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PicoPicoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PicoPicoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

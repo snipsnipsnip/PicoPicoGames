@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,29 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "PPGameDef.h"
+
+#pragma once
+
+short PPGame_CharDeltaX(PPGameImage* patternMaster,int group,int pat);
+short PPGame_CharDeltaY(PPGameImage* patternMaster,int group,int pat);
+short PPGame_CharDeltaW(PPGameImage* patternMaster,int group,int pat);
+short PPGame_CharDeltaH(PPGameImage* patternMaster,int group,int pat);
+
+class GLButton {
+public:
+	GLButton(PPGameImage* _group,int _image,int _pat) {
+		group = _group;
+		image = _image;
+		pat = _pat;
+		dx = 0;
+		dy = 0;
+	}
+	PPGameImage* group;
+	int image;
+	int pat;
+	float dx;
+	float dy;
+};

@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,23 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#pragma once
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+int QBRnd(int a);
+int QBINT(int v);
+int QBSGN(int v);
+int QBABS(int v);
+
+#ifdef __cplusplus
+};
+#endif

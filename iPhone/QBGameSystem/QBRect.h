@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,32 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#pragma once
+
+class QBRect {
+public:
+	QBRect() : hit(true),rot(0) {}
+
+	int x,y;
+	int w,h;
+	
+	bool hit;
+	
+	float rot;
+	float p[2*5];
+	
+	float b[2*4];
+
+	bool tri_hitcheck(float* p1,float x,float y);
+
+	void set_point(float x,float y,float w,float h,float cx=0,float cy=0,float r=0);
+	void set_point(float cx=0,float cy=0,float r=0);
+	//bool check(QBRect* rect);
+	bool calc_hitcheck(float* p1,float* p2,float* b2);
+	bool calc_rectcheck(float* r1,float* r2);
+	void calc_bound(float* p,float* o);
+	void calc_rotate(float x,float y,float r,float* o);
+	bool calc_linecross(float* l1,float* l2);
+};

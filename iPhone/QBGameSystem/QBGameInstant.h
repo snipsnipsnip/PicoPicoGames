@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,39 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#ifndef __QBGAMEINSTANT_H__
+#define __QBGAMEINSTANT_H__
+
+#include "QBGame.h"
+
+class QBGameInstant : public QBGame {
+public:
+	QBGameInstant();
+	virtual ~QBGameInstant();
+
+	virtual PPGameTextureInfo* TextureInfo();
+	virtual void PutFont(int x,int y,int pat,unsigned char r,unsigned char g,unsigned char b,unsigned char a);
+	virtual int Idle();
+	virtual int KeyTextureID();
+
+	virtual void Print2(const char* format,...);
+	virtual void FontPut(int x,int y,int pat,int scale);
+
+	virtual void doTitle();
+	virtual void doOption();
+
+	virtual void drawTitle();
+	virtual void gameInit();
+	virtual void gameStart();
+	virtual void gameContinue();
+	virtual int gameIdle();
+
+	virtual void goStep(int step,int sub=0);
+	
+	int mainStep;
+	int mainSubStep;
+};
+
+#endif

@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,64 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#ifndef __QBSOUNDMAC_H__
+#define __QBSOUNDMAC_H__
+
+#include <pthread.h>
+#include <AudioToolbox/AudioToolbox.h>
+#include <AudioUnit/AUComponent.h>
+#include "QBSound.h"
+
+class QBSoundMac : public QBSound {
+public:
+	QBSoundMac(int maxChannel);
+	virtual ~QBSoundMac() {
+		if (mGraph) AUGraphStop(mGraph);
+	};
+
+	virtual int Init();
+	virtual int Exit();
+	virtual int Reset();
+	virtual int play(const char* mml,int channel=0,bool loop=false);
+	virtual int playpcm(signed short* dataPtr,unsigned long dataSize,int dataChannel,int track,bool loop=false);
+	virtual int playpcm(const char* filename,int track,bool loop=false,ogg_int64_t looppoint=0);
+	virtual int playmempcm(unsigned char* data,unsigned long size,int track,bool loop=false,ogg_int64_t looppoint=0);
+	virtual int stop(int trackindex);
+	virtual int fill_sound_buffer(void* buffer,int size);
+	virtual int isPlaying(int channel=0);
+	virtual int fadeOut(int track,int speed);
+	virtual int streamLoad();
+	virtual int setVolume(int track,float volume=1.0);
+	virtual float getVolume(int track);
+	virtual int setMasterVolume(float volume);
+	virtual float getMasterVolume();
+
+	virtual int sysPause();
+	virtual int sysPlay();
+	
+	virtual int p1(int track);
+	virtual int p2(int track);
+
+	AudioUnit mAudioUnit;
+	AudioStreamBasicDescription mAudioFormat;
+	AUNode mOutputNode;
+	AUGraph mGraph;
+	
+	pthread_mutex_t mMutex;
+	
+	pthread_t mLoaderThread;
+	
+	bool mThreadEnd;
+};
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#ifdef __cplusplus
+};
+#endif
+
+#endif //__QBSOUNDMAC_H__

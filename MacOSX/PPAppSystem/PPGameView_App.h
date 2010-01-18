@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,39 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#import <Cocoa/Cocoa.h>
+#import "PPGameSplite.h"
+#import "PPGameButton.h"
+
+@class PPGame;
+
+@interface PPGameView : NSOpenGLView {
+	IBOutlet id controller;
+	float deepZ;
+	PPGameSplite*		g;
+	PPGame* game;
+	bool _initialize;
+	float adx;
+	float ady;
+	unsigned long staticKey;
+	CGPoint	touchLocation;
+	bool	touchScreen;
+	NSMutableSet* touchesSet;
+}
+
+@property (nonatomic,readonly)  PPGameSplite* g;
+@property (nonatomic,retain) PPGame* game;
+@property (nonatomic,readonly) CGPoint touchLocation;
+@property (nonatomic,readonly) bool touchScreen;
+
+- (int)arrowKey:(GLButton*)button count:(int)count;
+- (unsigned long)arrowKey:(GLButton*)button;
+- (unsigned long)arrowKey4:(GLButton*)button;
+- (unsigned long)arrowKey8:(GLButton*)button;
+- (bool)touchCheck:(GLButton*)button;
+- (bool)touchCheckWithPoly:(float*)keyPos x:(float)x y:(float)y;
+- (unsigned long)staticButton;
+
+@end

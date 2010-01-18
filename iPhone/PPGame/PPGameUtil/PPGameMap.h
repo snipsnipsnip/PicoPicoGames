@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,31 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "PPGameMapData.h"
+
+class PPGameMap {
+public:
+	PPGameMap(const char* path);
+	virtual ~PPGameMap();
+
+	PPGameMapData map[3];
+};
+
+/*
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#endif
+#import "PPGameMapData.h"
+
+@interface PPGameMap : NSObject {
+@public;
+	PPGameMapData map[3];
+	NSArray* event;
+}
+
+- (NSArray*)events;
+
+@end
+*/

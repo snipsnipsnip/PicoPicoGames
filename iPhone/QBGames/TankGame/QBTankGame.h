@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,34 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#ifndef __QBTANKGAME_H__
+#define __QBTANKGAME_H__
+
+#include "QBGameInstant.h"
+
+class QBTankGame : public QBGameInstant {
+public:
+	QBTankGame();
+	virtual ~QBTankGame();
+
+	virtual PPGameTextureInfo* TextureInfo();
+	virtual void drawTitle();
+	virtual void gameInit();
+	virtual void gameStart();
+	virtual void gameContinue();
+	virtual int gameIdle();
+	
+	int tankx,tanky,tankc;
+	int tamax,tamay,tamad,tamat;
+	int bg[11][15];
+	int timer;
+	int score;
+	int hiscore;
+	int distance;
+	
+	int step;
+};
+
+#endif

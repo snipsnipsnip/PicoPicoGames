@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,69 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "QBTemplate.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "font.h"
+#include "font2.h"
+#include "key.h"
+
+enum {
+	QBCHAR_FONT,
+	QBCHAR_FONT2,
+	QBCHAR_KEY,
+	QBCHAR_TEMPLATE,
+};
+
+static PPGameTextureInfo texList[] = {
+	{"font.png",font_group,false},		//QBCHAR_FONT
+	{"font2.png",font2_group,false},	//QBCHAR_FONT2
+	{"key.png",key_group,false},		//QBCHAR_KEY
+	{"QBTemplate.png",NULL,false},		//QBCHAR_TEMPLATE
+	{NULL,NULL,false}
+};
+
+QBTemplate::QBTemplate()
+{
+}
+
+QBTemplate::~QBTemplate()
+{
+}
+
+/* テクスチャ情報 */
+PPGameTextureInfo* QBTemplate::TextureInfo()
+{
+	return texList;
+}
+
+/* タイトルの描画 */
+void QBTemplate::drawTitle()
+{
+	Color(12);
+	Offset(0+4+24,3*16+4);
+	Print2("TEMPLATE");
+	Color(15);
+	Offset(0-4+4+24,3*16+4-4);
+	Print2("TEMPLATE");
+}
+
+/* ゲーム起動時の初期化 */
+void QBTemplate::gameInit()
+{
+	InitBGM(1,"QBTemplatePlay");
+	InitBGM(2,"QBTemplateEnding");
+}
+
+/* ゲーム開始時の初期化 */
+void QBTemplate::gameStart()
+{
+}
+
+/* ゲーム中の処理 */
+int QBTemplate::gameIdle()
+{
+	return 0;
+}

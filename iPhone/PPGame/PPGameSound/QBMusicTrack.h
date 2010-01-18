@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,57 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+#define kNumberBuffers  3                              // 1
+struct AQPlayerState {
+    AudioStreamBasicDescription   mDataFormat;                    // 2
+    AudioQueueRef                 mQueue;                         // 3
+    AudioQueueBufferRef           mBuffers[kNumberBuffers];       // 4
+    AudioFileID                   mAudioFile;                     // 5
+    UInt32                        bufferByteSize;                 // 6
+    SInt64                        mCurrentPacket;                 // 7
+    UInt32                        mNumPacketsToRead;              // 8
+    AudioStreamPacketDescription  *mPacketDescs;                  // 9
+    bool                          mIsRunning;                     // 10
+	UInt32						  mLoopPoint;
+	bool						  mLoop;
+	Float32						  mGain;
+	bool						  mIsPlaying;
+};
+
+@interface QBMusicTrack : NSObject {
+	struct AQPlayerState aqData;
+	
+	Float32	mGain;
+	Float32 mMasterGain;
+	Float32 mPause;
+	
+	bool						  mPlay;
+	//bool						  mPause;
+	
+	NSString*					  mFile;
+}
+
+- (void)play:(NSString*)path;
+- (void)play:(NSString*)path withLoop:(int)loopPoint;
+//- (void)play;
+- (void)close;
+//- (void)replay;
+- (void)setVolume:(float)v;
+- (float)getVolume;
+- (void)setMasterVolume:(float)v;
+- (float)getMasterVolume;
+- (BOOL)isRunning;
+- (void)pause;
+- (void)resume;
+
+- (void)post:(NSString*)path;
+- (void)post:(NSString*)path withLoop:(int)loopPoint;
+
+- (void)myThreadMainMethod;//:(id)sender;
+
+@end

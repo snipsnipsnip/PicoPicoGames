@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bg0</key>
+	<data>
+	HQAcAIQAAABYBgAAhAAAAA6AAAACgCAAGoAAACAAAoAoACAAGYAAACAAAoAoACAAGoAA
+	AAKAIADygAAAAoAgABqAAAAgAAKAMAAgABmAAAAgAAKAMAAgABqAAAACgCAARIAAAAKA
+	IAAagAAAIAACgCgAIAAZgAAAIAACgCgAIAAagAAAAoAgAN2AAAA=
+	</data>
+	<key>bg1</key>
+	<data>
+	HQAcAEgAAABYBgAASAAAAA2AAAAaAAKAAAAZAFOAAAAZAC6AAAAaAMSAAAAZAAKAAAAZ
+	AJmAAAAZAAKAAAAaAFaAAAAZAF6AAAAIAH2AAAA=
+	</data>
+	<key>bg2</key>
+	<data>
+	HQAcAAwAAABYBgAADAAAACyDAAA=
+	</data>
+	<key>event</key>
+	<array/>
+</dict>
+</plist>

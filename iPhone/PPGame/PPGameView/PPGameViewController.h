@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,33 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#import <UIKit/UIKit.h>
+#import "PPGame.h"
+
+
+@interface PPGameViewController : UIViewController <UIAccelerometerDelegate> {
+	IBOutlet UIBarButtonItem* doneButton;
+	UIAcceleration* preAcc;
+	int orientationTimer;
+	int nowOrientation;
+	BOOL initialOrientation;
+	NSString* gameClassName;
+	PPGame* _game;
+}
+
+@property (nonatomic,readonly) PPGame* game;
+@property (nonatomic,copy) NSString* gameClassName;
+
+- (IBAction)doneGame:(id)sender;
+- (void)exitGame;
+- (void)resignActive;
+- (void)becomeActive;
+
+-(void)rotate:(UIDeviceOrientation)interfaceOrientation;
+-(void)receivedRotate:(NSNotification*)notification;
+
+- (BOOL)horizontalView;
+
+@end

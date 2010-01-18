@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,52 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "PPGameSplite.h"
+//#include "QBGame.h"
+
+class PPGameText {
+public:
+	PPGameText();
+	virtual ~PPGameText();
+	
+	int print(PPGamePoly* poly,const char* string,int x,int y);
+	void idle(PPGameSplite* g,int texID);
+	
+	void setBGColor(unsigned char r,unsigned char g,unsigned char b,unsigned char a=255);
+	void setColor(unsigned char r,unsigned char g,unsigned char b,unsigned char a=255);
+
+	//void setFontSize(float size);
+	//void drawPoly(PPGameSplite* g);
+
+	PPGameImage group[2];
+
+private:
+	
+	int findFontIndex(unsigned short c);
+	int newFontIndex(unsigned short c);
+	
+	unsigned char pixel[256*256*4];
+	unsigned short ctable[16*16];
+	int cflag[16*16];
+	short imgWidthArray[256][9];
+	
+	PPGameSplite* g;
+	int texID;
+	bool updateTexture;
+	
+	float fontSize;
+	
+	unsigned char bg_color[4];
+	unsigned char ft_color[4];
+/*
+#if TARGET_OS_IPHONE
+	UIColor* bgColor;
+	UIColor* ftColor;
+#else
+	NSColor* bgColor;
+	NSColor* ftColor;
+#endif
+*/
+};

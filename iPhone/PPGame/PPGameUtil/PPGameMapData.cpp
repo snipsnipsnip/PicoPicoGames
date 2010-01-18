@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,49 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "PPGameMapData.h"
+#include "PPGameRunlength.h"
+
+PPGameMapData::PPGameMapData()
+{
+	map = NULL;
+}
+
+PPGameMapData::~PPGameMapData()
+{
+	if (map) free(map);
+}
+
+void PPGameMapData::init()
+{
+	map = NULL;
+}
+
+void PPGameMapData::freedata()
+{
+	if (map) free(map);
+	map = NULL;
+}
+
+bool PPGameMapData::decompress(const void* bytes)
+{
+	if (bytes == NULL) return false;
+	unsigned short* s = (unsigned short*)bytes;
+	width = s[0];
+	height = s[1];
+	long size = *((long*)&s[2]);
+	unsigned short* b = &s[4];
+	map = (unsigned short*)PPGameRunlength_Decompress(b,&size);
+	if (map) {
+		for (int y=0;y<height;y++) {
+			for (int x=0;x<width;x++) {
+//				printf("%d,",map[n]);
+			}
+		}
+		return true;
+	}
+	return false;
+}
+

@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,49 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "PPGameSound.h"
+#include "QBSound.h"
+
+static bool soundEnable = true;
+
+bool PPGame_GetSoundEnable()
+{
+	return soundEnable;
+}
+
+void PPGame_SetSoundEnable(bool enable)
+{
+	soundEnable = enable;
+}
+
+int PPGameMML_Play(const char* mml,int track)
+{
+	return QBSound_Play(mml,track);
+}
+
+int PPGameMML_Stop(int track)
+{
+	return QBSound_Stop(track);
+}
+
+int PPGameMML_IsPlaying(int track)
+{
+	return QBSound_IsPlaying(track);
+}
+
+int PPGameMML_SetVolume(int track,float volume)
+{
+	return QBSound_SetVolume(track,volume);
+}
+
+int PPGameMML_SetMasterVolume(float volume)
+{
+	return QBSound_SetMasterVolume(volume);
+}
+
+float PPGameMML_GetMasterVolume()
+{
+	return QBSound_GetMasterVolume();
+}

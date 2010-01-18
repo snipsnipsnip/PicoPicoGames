@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,46 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#pragma once
+
+#define QBMENU_MAX_LINE 10
+
+class QBGame;
+
+class QBMenu {
+public:
+	QBMenu();
+	virtual ~QBMenu();
+	
+	void Init();
+	
+	int offsetx,offsety;
+	int x,y;
+	int w,h;
+	int cur;
+	int precur;
+	bool disp;
+	bool touchOK;
+	
+	bool touch;
+	bool pretouch;
+	bool select;
+	bool enable;
+	int touchCur;
+	
+	int frameColor;
+	int fillColor;
+	
+	const char* string[QBMENU_MAX_LINE];
+	
+	virtual int draw(QBGame* game);
+	virtual bool touchRect(float* pos,int c);
+	
+	void play();
+	void playDispose();
+	
+	void up();
+	void down();
+};

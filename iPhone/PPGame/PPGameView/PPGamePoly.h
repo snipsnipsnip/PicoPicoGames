@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,36 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#pragma once
+
+class PPGamePoly {
+public:
+	PPGamePoly() : r(255),g(255),b(255),alpha(255) {}
+
+	int type;
+	//int color;
+	int x,y;
+	float cx,cy;
+	float w,h;
+	//float x3,y3;
+	int cliph;
+	int pat;
+	int group;
+	int blend;
+	float rot;
+	unsigned char r;
+	unsigned char g;
+	unsigned char b;
+	unsigned char alpha;
+
+	void init();
+	void color(unsigned char _r,unsigned char _g,unsigned char _b);
+	//void alpha(unsigned char _alpha);
+	void splite(int _x,int _y,int _pat,int _group=0,int _type=0,float _scale=1.0);
+
+	void line(int x1,int y1,int x2,int y2);
+	void fill(int x1,int y1,int x2,int y2);
+	//void poly(int x1,int y1,int x2,int y2,int x3,int y3);
+};

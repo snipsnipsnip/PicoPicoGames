@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,36 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#pragma once
+
+#define PPGAME_KEY_SIDE_RIGHT "key_side_right"
+#define PPGAME_KEY_SIDE_LEFT "key_side_left"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+const char* PPGameResourcePath(const char* name);
+int PPGame_SetDefault(const char* name);
+int PPGame_GetDefault(const char* name);
+int PPGame_GetParam(const char* key,int defaultValue);
+void PPGame_SetParam(const char* key,int value);
+unsigned char* PPGame_GetData(const char* key,int* dataSize);
+void PPGame_SetData(const char* key,unsigned char* data,int dataSize);
+unsigned char* PPGame_LoadPNG(const char* path,unsigned long* width,unsigned long* height,unsigned long* bytesPerRow);
+
+int PPGame_InitBGM(int no,const char* key);
+void PPGame_ReleaseBGM();
+void PPGame_IdleBGM(void* controller,int playBGM,bool playBGMOneTime,int chooseBGM);
+
+int PPGame_GetLocale();
+
+#ifdef _WIN32
+#define M_PI		3.14159265358979323846
+#endif
+
+#ifdef __cplusplus
+};
+#endif

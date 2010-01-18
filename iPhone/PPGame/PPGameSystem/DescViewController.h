@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,22 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#import <UIKit/UIKit.h>
+
+
+@interface DescViewController : UIViewController <UIWebViewDelegate> {
+	NSDictionary* gameInfo;
+	IBOutlet UIWebView* gameDesc;
+	IBOutlet UIBarButtonItem* startButton;
+	IBOutlet UIView* loadingView;
+	int step;
+}
+
+@property (nonatomic, retain) NSDictionary* gameInfo;
+@property (nonatomic, readonly) UIBarButtonItem* startButton;
+
+- (IBAction)startGame:(id)sender;
+
+@end

@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,30 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "QBUtil.h"
+
+int QBRnd(int a)
+{
+	float d = (rand() % 32000)/32000.0;
+	return (int)(d*a);
+}
+
+int QBINT(int v)
+{
+	return v;
+}
+
+int QBSGN(int v)
+{
+	if (v < 0) return -1;
+	if (v == 0) return 0;
+	return 1;
+}
+
+int QBABS(int v)
+{
+	if (v < 0) v = -v;
+	return v;
+}

@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,38 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#import <Foundation/Foundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
+
+@interface PPGameBGM : NSObject <MPMediaPickerControllerDelegate> {
+	MPMediaItemCollection		*music;
+	UIViewController* controller;
+	NSString* key;
+	BOOL selectedPlay;
+}
+
+@property (nonatomic, readonly) MPMusicPlayerController* musicPlayer;
+@property (nonatomic, retain) MPMediaItemCollection* music;
+@property (nonatomic, retain) UIViewController* controller;
+@property (nonatomic, copy) NSString* key;
+@property (nonatomic, assign) BOOL selectedPlay;
+
++ (MPMusicPlayerController*)musicPlayer;
++ (void)stop;
+
+- (void)selectBGM:(UIViewController*)controller;
+
+- (void)play;
+- (void)playOneTime;
+- (void)stop;
+
+- (void)reset;
+
+- (bool)saveForKey:(NSString*)keyName;
+- (bool)loadForKey:(NSString*)keyName;
+
+@end

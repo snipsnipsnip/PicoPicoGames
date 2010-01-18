@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,24 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#pragma once
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+int PPGameMML_Play(const char* mml,int track);
+int PPGameMML_Stop(int track);
+int PPGameMML_IsPlaying(int track);
+int PPGameMML_SetVolume(int track,float volume=1.0);
+int PPGameMML_SetMasterVolume(float volume=1.0);
+float PPGameMML_GetMasterVolume();
+
+bool PPGame_GetSoundEnable();
+void PPGame_SetSoundEnable(bool enable);
+
+#ifdef __cplusplus
+};
+#endif

@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,38 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#endif
+#import "PPGame.h"
+#if TARGET_OS_IPHONE
+#import "PPGameBGM.h"
+#endif
+#import "PPGameMap.h"
+//#import "PPGameGeometry.h"
+#import "QBGame.h"
+#import "QBMenu.h"
+#import "key.h"
+#import "font.h"
+
+@interface QBGameController : PPGame {
+	int arrowKeyNo;
+	int buttonANo;
+	int buttonBNo;
+	QBGame* game;
+}
+
+- (void)touchMenu:(QBMenu*)menu;
+- (void)drawKey:(int)textureId;
+- (unsigned long)getKey;
+- (void)doGameIdle;
+- (int)controllerLayout;
+- (unsigned long)buttonVisible;
+- (int)crosskeyAreaSize;
+- (QBGame*)game;
+- (int)idle;
+//- (void)bgmIdle;
+
+@end

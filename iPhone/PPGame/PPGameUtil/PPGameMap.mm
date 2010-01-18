@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,63 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#include "PPGameMap.h"
+
+PPGameMap::PPGameMap(const char* path)
+{
+	NSDictionary* d = [[NSDictionary dictionaryWithContentsOfFile:[NSString stringWithCString:path]] retain];
+	map[0].init();
+	map[1].init();
+	map[2].init();
+	map[0].decompress([[d objectForKey:@"bg0"] bytes]);
+	map[1].decompress([[d objectForKey:@"bg1"] bytes]);
+	map[2].decompress([[d objectForKey:@"bg2"] bytes]);
+	[d release];
+}
+
+PPGameMap::~PPGameMap()
+{
+	map[0].freedata();
+	map[1].freedata();
+	map[2].freedata();
+}
+
+/*
+#import "PPGameMap.h"
+
+@implementation PPGameMap
+
+- (id)initWithContentsOfFile:(NSString*)path
+{
+	if (self = [super init]) {
+		NSDictionary* d = [[NSDictionary dictionaryWithContentsOfFile:path] retain];
+		map[0].init();
+		map[1].init();
+		map[2].init();
+		map[0].decompress([[d objectForKey:@"bg0"] bytes]);
+		map[1].decompress([[d objectForKey:@"bg1"] bytes]);
+		map[2].decompress([[d objectForKey:@"bg2"] bytes]);
+		event = [[d objectForKey:@"event"] retain];
+		[d release];
+	}
+	return self;
+}
+
+- (void)dealloc
+{
+	map[0].freedata();
+	map[1].freedata();
+	map[2].freedata();
+	[event release];
+	[super dealloc];
+}
+
+- (NSArray*)events
+{
+	return event;
+}
+
+@end
+*/

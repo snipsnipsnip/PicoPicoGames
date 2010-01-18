@@ -1,4 +1,5 @@
-  PicoPicoGames for iPhone/iPod touch
+/*
+  PicoPicoGames
 
   Copyright (c) 2009, Hiromitsu Yamaguchi, All rights reserved.
 
@@ -28,3 +29,25 @@
   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+#ifndef __QBPICOHERO_H__
+#define __QBPICOHERO_H__
+
+#include "QBPicoHero2.h"
+
+class QBPicoHero: public QBPicoHero2 {
+public:
+	virtual bool ScrollMap();
+	virtual bool ShadowEnding();
+	virtual const char* MapDataName();
+	virtual const char* SaveDataName();
+	virtual void DrawItemIcon();
+	virtual void InitPlayer();
+	virtual void LevelUp();
+	virtual void* EnemyData();
+	virtual bool Continue();
+	virtual void InitBGMSetting();
+};
+
+#endif
